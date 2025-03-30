@@ -2,3 +2,4 @@ aiohttp
 discord
 asyncio
 rich
+dotenv
