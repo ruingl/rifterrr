@@ -1,3 +1,6 @@
+# Rifter 1.0
+# Coded By Lain<3
+
 import sys
 import os
 import asyncio
@@ -61,7 +64,7 @@ async def on_message(message):
         description=f"`{attachment.filename}` is being processed in `{mode}` mode.",
         color=discord.Color.blue()
       )
-      embed.set_footer(text="Please wait...")
+      embed.set_footer(text="Powered by FileRift by DanielSpaniel")
       status_msg = await message.channel.send(embed=embed)
 
       # Run rift.start
@@ -74,6 +77,7 @@ async def on_message(message):
           description=f"`{attachment.filename}` has been processed successfully!",
           color=discord.Color.green()
         )
+        embed.set_footer(text="Powered by FileRift by DanielSpaniel")
         await status_msg.edit(embed=embed)
         await message.channel.send(file=discord.File(output_file_path))
         os.remove(output_file_path)
